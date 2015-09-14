@@ -4,6 +4,7 @@
 Heap:
 """
 
+
 class Heap(object):
     HEAP_SIZE = 10
 
@@ -16,7 +17,7 @@ class Heap(object):
             print("Heap is full")
             return
 
-        self.currentPosition = self.currentPosition + 1
+        self.currentPosition += 1
         self.heap[self.currentPosition] = item
         self.fixUp(self.currentPosition)  # Parent may be smaller than children, so swap if necessary
 
@@ -83,7 +84,3 @@ class Heap(object):
             self.heap[0] = self.heap[self.currentPosition - i]
             self.heap[self.currentPosition - i] = temp
             self.fixDown(0, self.currentPosition - i - 1)
-
-
-
-
